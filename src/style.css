@@ -1,0 +1,13 @@
+/* @font-face {
+  font-family: "MyFont";
+
+  Not Working ?
+  src: url("./fonts/PlayfairDisplay-VariableFont_wght.ttf") format("ttf");
+} 
+*/
+
+.hello {
+  color: red;
+  /* font-family: "MyFont"; */
+  font-family: "Playfair Display", serif;
+}
