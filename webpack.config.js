@@ -7,15 +7,17 @@ module.exports = {
     index: "./src/index.js",
     print: "./src/print.js",
   },
+  devtool: "inline-source-map",
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Output Management",
+      title: "Development",
     }),
   ],
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -38,7 +40,9 @@ module.exports = {
     static: {
       directory: path.join(__dirname, "dist"),
     },
-    compress: true,
     port: 8080,
+  },
+  optimization: {
+    runtimeChunk: "single",
   },
 };
